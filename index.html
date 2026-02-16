@@ -1,87 +1,56 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Lcdo. Jesús Portillo | Consultoría Contable</title>
+<style>
+:root {
+    --azul-corporativo: #142f4c;
+    --azul-enfasis: #1f4e79;
+    --vino-elegante: #7a1e22;
+    --verde-cita: #1f9d55;
+    --blanco: #ffffff;
+    --texto-oscuro: #1f2937;
+    --gris-suave: #f4f6f9;
+}
 
-    <!-- Fonts & Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
 
-    <style>
-        :root {
-            --azul-corporativo: #142f4c;
-            --azul-enfasis: #1f4e79;
-            --vino-elegante: #7a1e22;
-            --verde-cita: #1f9d55;
-            --blanco: #ffffff;
-            --texto-oscuro: #1f2937;
-            --gris-suave: #f4f6f9;
-        }
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--gris-suave);
+    color: var(--texto-oscuro);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-        }
+/* HEADER */
+header {
+    background: linear-gradient(135deg, var(--azul-corporativo), var(--azul-enfasis));
+    padding: 18px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 4px solid var(--vino-elegante);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+@media (min-width: 768px) {
+    header { flex-direction: row; justify-content: space-between; padding: 20px 8%; }
+}
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--gris-suave);
-            color: var(--texto-oscuro);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
+.logo-area img {
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid var(--blanco);
+}
+@media (min-width: 768px) { .logo-area img { height: 70px; } }
 
-        header {
-            background: linear-gradient(135deg, var(--azul-corporativo), var(--azul-enfasis));
-            padding: 18px 5%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-bottom: 4px solid var(--vino-elegante);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        @media (min-width: 768px) {
-            header {
-                flex-direction: row;
-                justify-content: space-between;
-                padding: 20px 8%;
-            }
-        }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo-area img {
-            height: 60px;
-            border-radius: 50%;
-            border: 3px solid var(--blanco);
-        }
-
-        @media (min-width: 768px) {
-            .logo-area img {
-                height: 70px;
-            }
-        }
-
-        .logo-text h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            color: var(--blanco);
-        }
-
-        .logo-text p {
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-            text-transform: uppe
+.logo-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(-
 
 
+     
