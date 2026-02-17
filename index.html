@@ -45,17 +45,21 @@
             header { flex-direction: row; justify-content: space-between; padding: 15px 10%; }
         }
 
+        /* Estilo del Círculo con la Calculadora */
         .logo-area { display: flex; align-items: center; gap: 15px; }
         
-        .logo-area img { 
-            height: 65px; 
-            width: 65px;
-            object-fit: contain;
-            border-radius: 50%; 
-            border: 2px solid var(--blanco); 
+        .icon-circle { 
+            height: 60px; 
+            width: 60px;
             background: white;
-            padding: 5px;
-            transition: transform 0.3s;
+            border-radius: 50%; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--vino-elegante);
+            color: var(--vino-elegante); /* Color Vino para la calculadora */
+            font-size: 28px;
+            transition: 0.3s;
         }
 
         .logo-text h1 { 
@@ -90,12 +94,7 @@
 
         @media (min-width: 768px) { .hero { padding: 120px 5%; } }
 
-        .hero h2 { 
-            font-family: 'Playfair Display', serif; 
-            font-size: 2.2rem; 
-            margin-bottom: 15px;
-        }
-        
+        .hero h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 15px; }
         .hero p { font-weight: 300; font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
 
         .btn-agenda {
@@ -106,15 +105,15 @@
             text-decoration: none;
             font-weight: 600;
             border-radius: 4px; 
-            transition: 0.3s;
             margin-top: 30px;
             text-transform: uppercase;
             font-size: 0.85rem;
+            transition: 0.3s;
         }
+        .btn-agenda:hover { background: #047857; transform: translateY(-2px); }
 
         /* --- SERVICIOS --- */
         .container { padding: 50px 5%; max-width: 1200px; margin: auto; }
-        
         .section-title { 
             text-align: center; 
             font-family: 'Playfair Display', serif; 
@@ -152,7 +151,6 @@
 
         /* --- CONTACTO --- */
         #contacto { background: #f8fafc; padding: 60px 5%; }
-
         .contact-card {
             background: var(--azul-corporativo);
             color: white;
@@ -162,13 +160,11 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
-
         .contact-item { text-align: center; }
         .contact-item i { color: #38bdf8; margin-bottom: 15px; display: block; }
-        .contact-item h4 { font-family: 'Playfair Display', serif; margin-bottom: 10px; }
         .contact-item a { color: #cbd5e1; text-decoration: none; }
 
-        /* WHATSAPP FLOAT */
+        /* WHATSAPP */
         .wa-float { 
             position: fixed; bottom: 25px; right: 25px; 
             background: #25d366; color: white; 
@@ -185,7 +181,9 @@
 
     <header>
         <div class="logo-area">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Escudo_de_la_Contadur%C3%ADa_P%C3%BAblica.png/600px-Escudo_de_la_Contadur%C3%ADa_P%C3%BAblica.png" alt="Escudo Contaduría Pública">
+            <div class="icon-circle">
+                <i class="fas fa-calculator"></i>
+            </div>
             <div class="logo-text">
                 <h1>Jesús Portillo</h1>
                 <p>Contador Público Colegiado</p>
