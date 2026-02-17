@@ -47,7 +47,6 @@
 
         .logo-area { display: flex; align-items: center; gap: 15px; }
         
-        /* Estilo específico para el escudo del CCPEZ */
         .logo-area img { 
             height: 65px; 
             width: 65px;
@@ -55,10 +54,9 @@
             border-radius: 50%; 
             border: 2px solid var(--blanco); 
             background: white;
-            padding: 3px;
+            padding: 5px;
             transition: transform 0.3s;
         }
-        .logo-area img:hover { transform: scale(1.05); }
 
         .logo-text h1 { 
             font-family: 'Playfair Display', serif; 
@@ -85,7 +83,6 @@
                         url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             color: white;
             padding: 80px 5%;
             text-align: center;
@@ -97,7 +94,6 @@
             font-family: 'Playfair Display', serif; 
             font-size: 2.2rem; 
             margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         .hero p { font-weight: 300; font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
@@ -110,18 +106,10 @@
             text-decoration: none;
             font-weight: 600;
             border-radius: 4px; 
-            transition: all 0.4s ease;
+            transition: 0.3s;
             margin-top: 30px;
             text-transform: uppercase;
-            letter-spacing: 1px;
             font-size: 0.85rem;
-            box-shadow: 0 4px 15px rgba(5, 150, 105, 0.4);
-        }
-
-        .btn-agenda:hover { 
-            background-color: #047857; 
-            transform: translateY(-2px); 
-            box-shadow: 0 6px 20px rgba(5, 150, 105, 0.5);
         }
 
         /* --- SERVICIOS --- */
@@ -133,15 +121,6 @@
             font-size: 2rem; 
             margin-bottom: 50px; 
             color: var(--azul-corporativo); 
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: var(--vino-elegante);
-            margin: 15px auto;
         }
 
         .services-grid {
@@ -154,20 +133,12 @@
             background: var(--blanco);
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             border-top: 4px solid var(--azul-corporativo);
-            height: 100%;
         }
 
-        .card:hover { 
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
-        }
-
-        .img-container { width: 100%; height: 200px; overflow: hidden; position: relative; }
-        .card img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-        .card:hover img { transform: scale(1.1); }
+        .img-container { width: 100%; height: 200px; overflow: hidden; }
+        .card img { width: 100%; height: 100%; object-fit: cover; }
 
         .card-body { padding: 25px; }
         .card-body h3 { 
@@ -176,8 +147,8 @@
             color: var(--azul-corporativo); 
             margin-bottom: 15px; 
         }
-        .card-body li { list-style: none; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 12px; font-size: 0.95rem; color: #475569; }
-        .card-body i { color: var(--vino-elegante); font-size: 1.1rem; }
+        .card-body li { list-style: none; margin-bottom: 12px; display: flex; gap: 12px; font-size: 0.95rem; color: #475569; }
+        .card-body i { color: var(--vino-elegante); }
 
         /* --- CONTACTO --- */
         #contacto { background: #f8fafc; padding: 60px 5%; }
@@ -190,14 +161,12 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
-        .contact-item { text-align: center; padding: 20px; border-radius: 8px; }
+        .contact-item { text-align: center; }
         .contact-item i { color: #38bdf8; margin-bottom: 15px; display: block; }
-        .contact-item h4 { font-family: 'Playfair Display', serif; margin-bottom: 10px; font-size: 1.2rem; }
-        .contact-item p, .contact-item a { color: #cbd5e1; text-decoration: none; transition: 0.3s; word-break: break-all; }
-        .contact-item a:hover { color: white; }
+        .contact-item h4 { font-family: 'Playfair Display', serif; margin-bottom: 10px; }
+        .contact-item a { color: #cbd5e1; text-decoration: none; }
 
         /* WHATSAPP FLOAT */
         .wa-float { 
@@ -206,32 +175,30 @@
             width: 60px; height: 60px; border-radius: 50%; 
             display: flex; align-items: center; justify-content: center; 
             font-size: 32px; z-index: 2000; 
-            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
-            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
-        .wa-float:hover { transform: scale(1.1); }
 
-        footer { background: #020617; color: #64748b; padding: 40px; text-align: center; font-size: 0.85rem; border-top: 1px solid #1e293b; }
+        footer { background: #020617; color: #64748b; padding: 40px; text-align: center; font-size: 0.85rem; }
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo-area">
-            <img src="https://ccpezulia.org/wp-content/uploads/2021/04/cropped-logo-ccpez-1.png" alt="Logo CCPEZ">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Escudo_de_la_Contadur%C3%ADa_P%C3%BAblica.png/600px-Escudo_de_la_Contadur%C3%ADa_P%C3%BAblica.png" alt="Escudo Contaduría Pública">
             <div class="logo-text">
                 <h1>Jesús Portillo</h1>
                 <p>Contador Público Colegiado</p>
             </div>
         </div>
-        <div style="color: #cbd5e1; font-size: 0.9rem; font-weight: 400; margin-top: 10px;">
+        <div style="color: #cbd5e1; font-size: 0.9rem; margin-top: 10px;">
             <i class="fas fa-location-dot" style="margin-right: 5px; color: var(--vino-elegante);"></i> Maracaibo, Venezuela
         </div>
     </header>
 
     <section class="hero">
         <h2>Excelencia en Gestión Contable</h2>
-        <p>Soluciones estratégicas para su crecimiento financiero y empresarial con el respaldo de un profesional colegiado.</p>
+        <p>Soluciones estratégicas para su crecimiento financiero y empresarial.</p>
         <a href="#contacto" class="btn-agenda">Agendar Consulta</a>
     </section>
 
