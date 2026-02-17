@@ -10,10 +10,10 @@
 
     <style>
         :root {
-            --azul-corporativo: #0f172a; /* Azul más profundo y moderno */
+            --azul-corporativo: #0f172a; 
             --azul-enfasis: #1e293b;
-            --vino-elegante: #831843; /* Un tono vino más vibrante */
-            --verde-cita: #059669; /* Verde esmeralda profesional */
+            --vino-elegante: #831843; 
+            --verde-cita: #059669; 
             --blanco: #ffffff;
             --texto-oscuro: #1e293b;
             --gris-suave: #f1f5f9;
@@ -25,7 +25,7 @@
             font-family: 'Montserrat', sans-serif; 
             background-color: var(--gris-suave); 
             color: var(--texto-oscuro); 
-            line-height: 1.7; /* Mejor legibilidad */
+            line-height: 1.7; 
             overflow-x: hidden;
         }
 
@@ -46,10 +46,16 @@
         }
 
         .logo-area { display: flex; align-items: center; gap: 15px; }
+        
+        /* Estilo específico para el escudo del CCPEZ */
         .logo-area img { 
-            height: 55px; 
+            height: 65px; 
+            width: 65px;
+            object-fit: contain;
             border-radius: 50%; 
-            border: 2px solid rgba(255,255,255,0.2); 
+            border: 2px solid var(--blanco); 
+            background: white;
+            padding: 3px;
             transition: transform 0.3s;
         }
         .logo-area img:hover { transform: scale(1.05); }
@@ -59,6 +65,7 @@
             font-size: 1.3rem; 
             color: var(--blanco);
             letter-spacing: 0.5px;
+            line-height: 1.2;
         }
         
         @media (min-width: 768px) { .logo-text h1 { font-size: 1.7rem; } }
@@ -78,7 +85,7 @@
                         url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Efecto Parallax en PC */
+            background-attachment: fixed;
             color: white;
             padding: 80px 5%;
             text-align: center;
@@ -102,7 +109,7 @@
             padding: 16px 40px;
             text-decoration: none;
             font-weight: 600;
-            border-radius: 4px; /* Bordes menos redondeados para más seriedad */
+            border-radius: 4px; 
             transition: all 0.4s ease;
             margin-top: 30px;
             text-transform: uppercase;
@@ -150,6 +157,7 @@
             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border-top: 4px solid var(--azul-corporativo);
+            height: 100%;
         }
 
         .card:hover { 
@@ -158,10 +166,6 @@
         }
 
         .img-container { width: 100%; height: 200px; overflow: hidden; position: relative; }
-        .img-container::after { 
-            content: ''; position: absolute; top: 0; left: 0; 
-            width: 100%; height: 100%; background: rgba(26, 58, 90, 0.1); 
-        }
         .card img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
         .card:hover img { transform: scale(1.1); }
 
@@ -189,14 +193,13 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
-        .contact-item { text-align: center; padding: 20px; border-radius: 8px; transition: background 0.3s; }
-        .contact-item:hover { background: rgba(255,255,255,0.05); }
+        .contact-item { text-align: center; padding: 20px; border-radius: 8px; }
         .contact-item i { color: #38bdf8; margin-bottom: 15px; display: block; }
         .contact-item h4 { font-family: 'Playfair Display', serif; margin-bottom: 10px; font-size: 1.2rem; }
-        .contact-item p, .contact-item a { color: #cbd5e1; text-decoration: none; transition: 0.3s; }
+        .contact-item p, .contact-item a { color: #cbd5e1; text-decoration: none; transition: 0.3s; word-break: break-all; }
         .contact-item a:hover { color: white; }
 
-        /* BOTÓN FLOTANTE WHATSAPP */
+        /* WHATSAPP FLOAT */
         .wa-float { 
             position: fixed; bottom: 25px; right: 25px; 
             background: #25d366; color: white; 
@@ -206,7 +209,7 @@
             box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
             transition: 0.3s;
         }
-        .wa-float:hover { transform: scale(1.1) rotate(10deg); }
+        .wa-float:hover { transform: scale(1.1); }
 
         footer { background: #020617; color: #64748b; padding: 40px; text-align: center; font-size: 0.85rem; border-top: 1px solid #1e293b; }
     </style>
@@ -215,7 +218,7 @@
 
     <header>
         <div class="logo-area">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf_M0E_KPrM0OqF-A7uS-mK3YvBv7H7Z7xbg&s" alt="Logo Lcdo. Jesús Portillo">
+            <img src="https://ccpezulia.org/wp-content/uploads/2021/04/cropped-logo-ccpez-1.png" alt="Logo CCPEZ">
             <div class="logo-text">
                 <h1>Jesús Portillo</h1>
                 <p>Contador Público Colegiado</p>
@@ -228,8 +231,8 @@
 
     <section class="hero">
         <h2>Excelencia en Gestión Contable</h2>
-        <p>Soluciones estratégicas y asesoría integral para garantizar la transparencia y el crecimiento de su patrimonio empresarial.</p>
-        <a href="#contacto" class="btn-agenda">Iniciar Consulta</a>
+        <p>Soluciones estratégicas para su crecimiento financiero y empresarial con el respaldo de un profesional colegiado.</p>
+        <a href="#contacto" class="btn-agenda">Agendar Consulta</a>
     </section>
 
     <main class="container">
