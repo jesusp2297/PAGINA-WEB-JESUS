@@ -30,9 +30,9 @@
             overflow-x: hidden;
         }
 
-        /* --- HEADER PREMIUM --- */
+        /* --- HEADER --- */
         header {
-            background: rgba(15, 23, 42, 0.95);
+            background: rgba(15, 23, 42, 0.98);
             backdrop-filter: blur(10px);
             padding: 15px 5%;
             display: flex;
@@ -49,60 +49,51 @@
 
         .logo-area { display: flex; align-items: center; gap: 15px; }
         
-        /* Círculo con calculadora dorada */
         .icon-circle { 
-            height: 65px; 
-            width: 65px;
+            height: 60px; width: 60px;
             background: var(--azul-prime);
             border-radius: 50%; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             border: 2px solid var(--dorado-solido);
-            box-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
-            transition: 0.5s;
+            box-shadow: 0 0 15px rgba(197, 160, 89, 0.3);
         }
         .icon-circle i {
             background: var(--dorado);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-size: 30px;
+            font-size: 28px;
         }
 
         .logo-text h1 { 
             font-family: 'Playfair Display', serif; 
-            font-size: 1.5rem; 
-            color: var(--blanco);
+            font-size: 1.4rem; color: var(--blanco);
             letter-spacing: 1px;
         }
         
         .logo-text p { 
-            font-size: 0.7rem; 
-            text-transform: uppercase; 
-            color: var(--dorado-solido); 
-            font-weight: 600;
+            font-size: 0.65rem; text-transform: uppercase; 
+            color: var(--dorado-solido); font-weight: 600;
             letter-spacing: 2px;
         }
 
-        /* --- HERO SECTION --- */
+        /* --- HERO PREMIUM --- */
         .hero {
             position: relative;
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(99, 23, 27, 0.6)), 
-                        url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200');
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+                        url('https://images.pexels.com/photos/7063765/pexels-photo-7063765.jpeg?auto=compress&cs=tinysrgb&w=1600');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             color: white;
-            padding: 100px 5%;
+            padding: 120px 5%;
             text-align: center;
-            border-bottom: 5px solid var(--dorado-solido);
+            border-bottom: 4px solid var(--dorado-solido);
         }
 
         .hero h2 { 
             font-family: 'Playfair Display', serif; 
-            font-size: 2.5rem; 
-            margin-bottom: 20px;
-            text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+            font-size: 2.8rem; margin-bottom: 20px;
+            text-shadow: 2px 4px 15px rgba(0,0,0,0.6);
         }
 
         .btn-agenda {
@@ -117,109 +108,80 @@
             text-transform: uppercase;
             font-size: 0.9rem;
             transition: 0.4s;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
-        .btn-agenda:hover { 
-            transform: scale(1.05) translateY(-3px);
-            box-shadow: 0 15px 30px rgba(197, 160, 89, 0.4);
-        }
+        .btn-agenda:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(197, 160, 89, 0.5); }
 
         /* --- SERVICIOS --- */
         .container { padding: 80px 5%; max-width: 1300px; margin: auto; }
-        
         .section-title { 
-            text-align: center; 
-            font-family: 'Playfair Display', serif; 
-            font-size: 2.5rem; 
-            margin-bottom: 60px; 
-            color: var(--azul-prime);
+            text-align: center; font-family: 'Playfair Display', serif; 
+            font-size: 2.5rem; margin-bottom: 60px; color: var(--azul-prime);
         }
         .section-title span { color: var(--dorado-solido); }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
         .card {
             background: var(--blanco);
-            border-radius: 15px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-            border: 1px solid rgba(197, 160, 89, 0.2);
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            transition: 0.3s;
         }
+        .card:hover { transform: translateY(-10px); border-color: var(--dorado-solido); }
 
-        .card:hover { 
-            transform: translateY(-15px);
-            border-color: var(--dorado-solido);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-        }
-
-        .img-container { width: 100%; height: 220px; overflow: hidden; position: relative; }
-        .img-container::after {
-            content: ''; position: absolute; bottom: 0; width: 100%; height: 4px; background: var(--dorado);
-        }
+        .img-container { width: 100%; height: 200px; overflow: hidden; position: relative; }
+        .img-container::after { content: ''; position: absolute; bottom: 0; width: 100%; height: 3px; background: var(--dorado); }
         .card img { width: 100%; height: 100%; object-fit: cover; }
 
-        .card-body { padding: 30px; }
-        .card-body h3 { 
-            font-family: 'Playfair Display', serif; 
-            font-size: 1.4rem; 
-            color: var(--azul-prime); 
-            margin-bottom: 20px; 
-            border-left: 4px solid var(--dorado-solido);
-            padding-left: 15px;
-        }
-        .card-body li { list-style: none; margin-bottom: 15px; display: flex; gap: 15px; font-size: 1rem; color: #475569; }
-        .card-body i { color: var(--dorado-solido); font-size: 1.1rem; }
+        .card-body { padding: 25px; }
+        .card-body h3 { font-family: 'Playfair Display', serif; color: var(--azul-prime); margin-bottom: 15px; border-left: 3px solid var(--dorado-solido); padding-left: 12px; }
+        .card-body li { list-style: none; margin-bottom: 12px; display: flex; gap: 12px; font-size: 0.95rem; color: #475569; }
+        .card-body i { color: var(--dorado-solido); }
 
-        /* --- CONTACTO LUXURY --- */
-        #contacto { background: var(--azul-prime); padding: 100px 5%; color: white; }
+        /* --- CONTACTO CORREGIDO PARA MÓVIL --- */
+        #contacto { background: var(--azul-prime); padding: 80px 5%; color: white; text-align: center; }
         
         .contact-card {
             background: linear-gradient(145deg, #1e293b, #0f172a);
-            padding: 50px;
-            border-radius: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            padding: 40px 20px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centrado forzado en móvil */
             gap: 40px;
-            border: 1px solid rgba(197, 160, 89, 0.3);
-            text-align: center;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
+        @media (min-width: 768px) {
+            .contact-card { flex-direction: row; justify-content: space-around; padding: 50px; }
+        }
+
+        .contact-item { width: 100%; display: flex; flex-direction: column; align-items: center; }
         .contact-item i { 
-            background: var(--dorado);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 40px;
-            margin-bottom: 20px; 
-            display: block; 
+            background: var(--dorado); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            font-size: 35px; margin-bottom: 15px; 
         }
-        .contact-item h4 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 10px; color: var(--blanco); }
-        .contact-item a { color: var(--dorado-solido); text-decoration: none; font-weight: 600; transition: 0.3s; }
-        .contact-item a:hover { color: var(--blanco); }
+        .contact-item h4 { font-family: 'Playfair Display', serif; margin-bottom: 10px; color: var(--blanco); }
+        .contact-item p, .contact-item a { color: var(--dorado-solido); text-decoration: none; font-weight: 500; font-size: 0.95rem; }
 
-        /* WHATSAPP PREMIUM */
+        /* WHATSAPP */
         .wa-float { 
-            position: fixed; bottom: 30px; right: 30px; 
+            position: fixed; bottom: 25px; right: 25px; 
             background: var(--verde-wa); color: white; 
-            width: 65px; height: 65px; border-radius: 50%; 
+            width: 60px; height: 60px; border-radius: 50%; 
             display: flex; align-items: center; justify-content: center; 
-            font-size: 35px; z-index: 2000; 
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
-            border: 2px solid var(--blanco);
+            font-size: 32px; z-index: 2000; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
-        footer { 
-            background: #020617; 
-            color: #94a3b8; 
-            padding: 50px; 
-            text-align: center; 
-            font-size: 0.9rem; 
-            border-top: 2px solid var(--dorado-solido);
-        }
+        footer { background: #020617; color: #64748b; padding: 40px; text-align: center; border-top: 1px solid var(--dorado-solido); }
     </style>
 </head>
 <body>
@@ -234,21 +196,20 @@
                 <p>Contador Público Colegiado</p>
             </div>
         </div>
-        <div style="color: #c5a059; font-weight: 600; font-size: 0.9rem; margin-top: 10px; border: 1px solid #c5a059; padding: 5px 15px; border-radius: 20px;">
-            <i class="fas fa-award" style="margin-right: 8px;"></i> Maracaibo, Venezuela
+        <div style="color: #c5a059; font-weight: 600; font-size: 0.85rem; margin-top: 10px; border: 1px solid rgba(197,160,89,0.5); padding: 5px 15px; border-radius: 20px;">
+            <i class="fas fa-location-dot" style="margin-right: 8px;"></i> San Jacinto, Zona Norte
         </div>
     </header>
 
     <section class="hero">
         <h2>Excelencia en Gestión Contable</h2>
-        <p>Soluciones estratégicas para su crecimiento financiero y empresarial con un enfoque de alto prestigio.</p>
+        <p>Soluciones financieras exclusivas diseñadas para el crecimiento sólido de su patrimonio y empresa.</p>
         <a href="#contacto" class="btn-agenda">Agendar Consultoría VIP</a>
     </section>
 
     <main class="container">
         <h2 class="section-title">Servicios <span>Especializados</span></h2>
         <div class="services-grid">
-            
             <div class="card">
                 <div class="img-container">
                     <img src="https://images.pexels.com/photos/6863246/pexels-photo-6863246.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gestión Fiscal">
@@ -256,8 +217,8 @@
                 <div class="card-body">
                     <h3>Gestión Fiscal</h3>
                     <ul>
-                        <li><i class="fas fa-check-double"></i> Declaraciones de <strong>IVA e ISLR</strong>.</li>
-                        <li><i class="fas fa-check-double"></i> Libros fiscales y asesoría tributaria.</li>
+                        <li><i class="fas fa-check-circle"></i> Declaraciones de <strong>IVA e ISLR</strong>.</li>
+                        <li><i class="fas fa-check-circle"></i> Libros fiscales y asesoría tributaria.</li>
                     </ul>
                 </div>
             </div>
@@ -269,8 +230,8 @@
                 <div class="card-body">
                     <h3>Estructura de Costos</h3>
                     <ul>
-                        <li><i class="fas fa-check-double"></i> Análisis de <strong>Costos y Gastos</strong>.</li>
-                        <li><i class="fas fa-check-double"></i> Determinación de márgenes de utilidad.</li>
+                        <li><i class="fas fa-check-circle"></i> Análisis de <strong>Costos y Gastos</strong>.</li>
+                        <li><i class="fas fa-check-circle"></i> Determinación de márgenes de utilidad.</li>
                     </ul>
                 </div>
             </div>
@@ -282,8 +243,8 @@
                 <div class="card-body">
                     <h3>Conciliaciones Bancarias</h3>
                     <ul>
-                        <li><i class="fas fa-check-double"></i> Control y ajuste de saldos bancarios.</li>
-                        <li><i class="fas fa-check-double"></i> Auditoría de movimientos de efectivo.</li>
+                        <li><i class="fas fa-check-circle"></i> Control y ajuste de saldos bancarios.</li>
+                        <li><i class="fas fa-check-circle"></i> Auditoría de movimientos de efectivo.</li>
                     </ul>
                 </div>
             </div>
@@ -295,8 +256,8 @@
                 <div class="card-body">
                     <h3>Sistemas SAP</h3>
                     <ul>
-                        <li><i class="fas fa-check-double"></i> Gestión en módulo <strong>FI-AP</strong>.</li>
-                        <li><i class="fas fa-check-double"></i> Análisis de cuentas y compensaciones.</li>
+                        <li><i class="fas fa-check-circle"></i> Gestión en módulo <strong>FI-AP</strong>.</li>
+                        <li><i class="fas fa-check-circle"></i> Análisis de cuentas y compensaciones.</li>
                     </ul>
                 </div>
             </div>
@@ -308,8 +269,8 @@
                 <div class="card-body">
                     <h3>Fe Pública</h3>
                     <ul>
-                        <li><i class="fas fa-check-double"></i> <strong>Certificaciones de Ingresos</strong>.</li>
-                        <li><i class="fas fa-check-double"></i> Balances Personales Visados.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Certificaciones de Ingresos</strong>.</li>
+                        <li><i class="fas fa-check-circle"></i> Balances Personales Visados.</li>
                     </ul>
                 </div>
             </div>
@@ -321,45 +282,41 @@
                 <div class="card-body">
                     <h3>Análisis en Excel</h3>
                     <ul>
-                        <li><i class="fas fa-check-double"></i> Automatización de procesos contables.</li>
-                        <li><i class="fas fa-check-double"></i> Reportes dinámicos de gestión.</li>
+                        <li><i class="fas fa-check-circle"></i> Automatización de procesos contables.</li>
+                        <li><i class="fas fa-check-circle"></i> Reportes dinámicos de gestión.</li>
                     </ul>
                 </div>
             </div>
-
         </div>
     </main>
 
     <section id="contacto">
-        <div class="container">
-            <h2 class="section-title" style="color:white">Contacto <span>Exclusivo</span></h2>
-            <div class="contact-card">
-                <div class="contact-item">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <h4>Ubicación</h4>
-                    <p>Maracaibo, Zulia, Venezuela</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope-open-text"></i>
-                    <h4>Canal Directo</h4>
-                    <p><a href="mailto:lcdo.jesusportillo@gmail.com">lcdo.jesusportillo@gmail.com</a></p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone-volume"></i>
-                    <h4>Atención</h4>
-                    <p><a href="tel:+584126417722">+58 412-6417722</a></p>
-                </div>
+        <h2 class="section-title" style="color:white">Contacto <span>Exclusivo</span></h2>
+        <div class="contact-card">
+            <div class="contact-item">
+                <i class="fas fa-location-dot"></i>
+                <h4>Ubicación</h4>
+                <p>San Jacinto, Zona Norte<br>Maracaibo, Venezuela</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope-open-text"></i>
+                <h4>Email</h4>
+                <p><a href="mailto:lcdo.jesusportillo@gmail.com">lcdo.jesusportillo@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone-volume"></i>
+                <h4>Atención</h4>
+                <p><a href="tel:+584126417722">+58 412-6417722</a></p>
             </div>
         </div>
     </section>
 
-    <a href="https://wa.me/584126417722" class="wa-float" target="_blank" aria-label="WhatsApp">
+    <a href="https://wa.me/584126417722" class="wa-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <footer>
         <p>&copy; 2026 Lcdo. Jesús Portillo - Consultor Contable | Maracaibo, Venezuela</p>
-        <p style="font-size: 0.7rem; margin-top: 10px; color: #576574;">Comprometidos con la integridad y el éxito financiero.</p>
     </footer>
 
 </body>
