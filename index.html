@@ -2,106 +2,205 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lcdo. Jesús Portillo | Consultoría Contable</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Lcdo. Jesús Portillo | Consultoría Contable Premium</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
         :root {
             --azul-prime: #0f172a; 
-            --dorado: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728);
+            --azul-soft: #1e293b;
+            --vino-clase: #63171b; 
+            --dorado: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
             --dorado-solido: #c5a059;
+            --verde-wa: #25d366; 
             --blanco: #ffffff;
+            --gris-lujo: #f8fafc;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
-        body { font-family: 'Montserrat', sans-serif; background-color: #f8fafc; color: var(--azul-prime); line-height: 1.6; }
+        
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--gris-lujo); 
+            color: var(--azul-prime); 
+            line-height: 1.8; 
+            overflow-x: hidden;
+        }
 
+        /* --- HEADER --- */
         header {
-            background: var(--azul-prime);
+            background: rgba(15, 23, 42, 0.98);
+            backdrop-filter: blur(10px);
             padding: 15px 5%;
             display: flex;
             flex-direction: column;
             align-items: center;
             border-bottom: 2px solid var(--dorado-solido);
             position: sticky; top: 0; z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.3);
         }
 
-        @media (min-width: 768px) { header { flex-direction: row; justify-content: space-between; } }
+        @media (min-width: 768px) {
+            header { flex-direction: row; justify-content: space-between; padding: 15px 10%; }
+        }
 
         .logo-area { display: flex; align-items: center; gap: 15px; }
+        
         .icon-circle { 
-            height: 50px; width: 50px; border-radius: 50%; 
+            height: 60px; width: 60px;
+            background: var(--azul-prime);
+            border-radius: 50%; 
             display: flex; align-items: center; justify-content: center;
-            border: 2px solid var(--dorado-solido); color: var(--dorado-solido);
+            border: 2px solid var(--dorado-solido);
+        }
+        .icon-circle i {
+            background: var(--dorado);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 28px;
         }
 
-        .logo-text h1 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--blanco); }
-        .logo-text p { font-size: 0.6rem; text-transform: uppercase; color: var(--dorado-solido); letter-spacing: 1px; }
+        .logo-text h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 1.4rem; color: var(--blanco);
+        }
+        
+        .logo-text p { 
+            font-size: 0.65rem; text-transform: uppercase; 
+            color: var(--dorado-solido); font-weight: 600;
+            letter-spacing: 2px;
+        }
 
+        /* --- HERO CON IMAGEN DE DESPACHO ELEGANTE --- */
         .hero {
-            background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)), 
-                        url('https://images.pexels.com/photos/3771097/pexels-photo-3771097.jpeg?auto=compress&cs=tinysrgb&w=800'); /* Imagen más pequeña para ahorrar datos */
-            background-size: cover; background-position: center;
-            color: white; padding: 100px 5%; text-align: center;
+            position: relative;
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), 
+                        url('https://images.pexels.com/photos/3771097/pexels-photo-3771097.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 140px 5%;
+            text-align: center;
+            border-bottom: 4px solid var(--dorado-solido);
         }
 
-        .hero h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 15px; }
+        .hero h2 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 2.8rem; margin-bottom: 20px;
+            text-shadow: 2px 4px 15px rgba(0,0,0,0.6);
+        }
 
         .btn-agenda {
-            display: inline-block; background: var(--dorado); color: #000;
-            padding: 15px 35px; text-decoration: none; font-weight: 700;
-            border-radius: 5px; margin-top: 25px; font-size: 0.8rem;
+            display: inline-block;
+            background: var(--dorado);
+            color: #000;
+            padding: 18px 45px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 5px; 
+            margin-top: 35px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: 0.4s;
         }
 
-        .container { padding: 60px 5%; max-width: 1200px; margin: auto; }
-        .section-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 40px; }
+        /* --- SERVICIOS --- */
+        .container { padding: 80px 5%; max-width: 1300px; margin: auto; }
+        .section-title { 
+            text-align: center; font-family: 'Playfair Display', serif; 
+            font-size: 2.5rem; margin-bottom: 60px; color: var(--azul-prime);
+        }
         .section-title span { color: var(--dorado-solido); }
 
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .card { background: var(--blanco); border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid rgba(197,160,89,0.1); }
-        .img-container { width: 100%; height: 180px; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--blanco);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid rgba(197, 160, 89, 0.15);
+        }
+
+        .img-container { width: 100%; height: 200px; overflow: hidden; position: relative; }
+        .img-container::after { content: ''; position: absolute; bottom: 0; width: 100%; height: 3px; background: var(--dorado); }
         .card img { width: 100%; height: 100%; object-fit: cover; }
-        .card-body { padding: 20px; }
-        .card-body h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 10px; border-left: 3px solid var(--dorado-solido); padding-left: 10px; }
-        .card-body li { list-style: none; font-size: 0.9rem; margin-bottom: 8px; display: flex; gap: 10px; }
+
+        .card-body { padding: 25px; }
+        .card-body h3 { font-family: 'Playfair Display', serif; color: var(--azul-prime); margin-bottom: 15px; border-left: 3px solid var(--dorado-solido); padding-left: 12px; }
+        .card-body li { list-style: none; margin-bottom: 12px; display: flex; gap: 12px; font-size: 0.95rem; color: #475569; }
         .card-body i { color: var(--dorado-solido); }
 
-        #contacto { background: var(--azul-prime); padding: 60px 5%; color: white; text-align: center; }
-        .contact-card { 
-            background: rgba(255,255,255,0.05); padding: 30px; border-radius: 15px;
-            display: flex; flex-direction: column; gap: 30px; border: 1px solid rgba(197,160,89,0.2);
+        /* --- CONTACTO AJUSTADO (CENTRADO TOTAL) --- */
+        #contacto { background: var(--azul-prime); padding: 80px 5%; color: white; }
+        
+        .contact-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            padding: 40px 20px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Asegura centrado en móvil */
+            justify-content: center;
+            gap: 40px;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center; /* Alinea texto al centro */
         }
-        @media (min-width: 768px) { .contact-card { flex-direction: row; justify-content: space-around; } }
 
-        .contact-item i { color: var(--dorado-solido); font-size: 30px; margin-bottom: 10px; }
-        .contact-item a { color: var(--dorado-solido); text-decoration: none; }
+        @media (min-width: 768px) {
+            .contact-card { flex-direction: row; justify-content: space-around; padding: 60px; }
+        }
 
-        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; z-index: 2000; }
+        .contact-item { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .contact-item i { 
+            background: var(--dorado); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            font-size: 38px; margin-bottom: 15px; 
+        }
+        .contact-item h4 { font-family: 'Playfair Display', serif; margin-bottom: 10px; color: var(--blanco); font-size: 1.2rem; }
+        .contact-item p, .contact-item a { color: var(--dorado-solido); text-decoration: none; font-weight: 500; font-size: 1rem; }
 
-        footer { background: #020617; color: #64748b; padding: 30px; text-align: center; font-size: 0.8rem; border-top: 1px solid var(--dorado-solido); }
+        /* WHATSAPP */
+        .wa-float { 
+            position: fixed; bottom: 25px; right: 25px; 
+            background: var(--verde-wa); color: white; 
+            width: 60px; height: 60px; border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; 
+            font-size: 32px; z-index: 2000; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        footer { background: #020617; color: #64748b; padding: 40px; text-align: center; border-top: 1px solid var(--dorado-solido); }
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo-area">
-            <div class="icon-circle"><i class="fas fa-calculator"></i></div>
+            <div class="icon-circle">
+                <i class="fas fa-calculator"></i>
+            </div>
             <div class="logo-text">
                 <h1>Jesús Portillo</h1>
                 <p>Contador Público Colegiado</p>
             </div>
         </div>
-        <div style="color: #c5a059; font-weight: 600; font-size: 0.75rem; margin-top: 10px; border: 1px solid rgba(197,160,89,0.3); padding: 5px 12px; border-radius: 20px;">
-            <i class="fas fa-location-dot"></i> Maracaibo Zona Norte, Estado Zulia, Venezuela
+        <div style="color: #c5a059; font-weight: 600; font-size: 0.85rem; margin-top: 10px; border: 1px solid rgba(197,160,89,0.5); padding: 5px 15px; border-radius: 20px;">
+            <i class="fas fa-location-dot" style="margin-right: 8px;"></i> San Jacinto, Zona Norte
         </div>
     </header>
 
     <section class="hero">
         <h2>Excelencia en Gestión Contable</h2>
-        <p>Soluciones financieras exclusivas para su crecimiento sólido.</p>
+        <p>Soluciones financieras exclusivas diseñadas para el crecimiento sólido de su patrimonio y empresa.</p>
         <a href="#contacto" class="btn-agenda">Agendar Consultoría VIP</a>
     </section>
 
@@ -109,41 +208,113 @@
         <h2 class="section-title">Servicios <span>Especializados</span></h2>
         <div class="services-grid">
             <div class="card">
-                <div class="img-container"><img src="https://images.pexels.com/photos/6863246/pexels-photo-6863246.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Gestión Fiscal"></div>
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/6863246/pexels-photo-6863246.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gestión Fiscal">
+                </div>
                 <div class="card-body">
                     <h3>Gestión Fiscal</h3>
-                    <ul><li><i class="fas fa-check-circle"></i> IVA e ISLR.</li><li><i class="fas fa-check-circle"></i> Libros y asesoría.</li></ul>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Declaraciones de <strong>IVA e ISLR</strong>.</li>
+                        <li><i class="fas fa-check-circle"></i> Libros fiscales y asesoría tributaria.</li>
+                    </ul>
                 </div>
             </div>
+
             <div class="card">
-                <div class="img-container"><img src="https://images.pexels.com/photos/5900222/pexels-photo-5900222.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Costos"></div>
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/5900222/pexels-photo-5900222.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Estructura de Costos">
+                </div>
                 <div class="card-body">
                     <h3>Estructura de Costos</h3>
-                    <ul><li><i class="fas fa-check-circle"></i> Análisis de Gastos.</li><li><i class="fas fa-check-circle"></i> Márgenes de utilidad.</li></ul>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Análisis de <strong>Costos y Gastos</strong>.</li>
+                        <li><i class="fas fa-check-circle"></i> Determinación de márgenes de utilidad.</li>
+                    </ul>
                 </div>
             </div>
+
             <div class="card">
-                <div class="img-container"><img src="https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Bancos"></div>
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Conciliaciones Bancarias">
+                </div>
                 <div class="card-body">
                     <h3>Conciliaciones Bancarias</h3>
-                    <ul><li><i class="fas fa-check-circle"></i> Control de saldos.</li><li><i class="fas fa-check-circle"></i> Auditoría de efectivo.</li></ul>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Control y ajuste de saldos bancarios.</li>
+                        <li><i class="fas fa-check-circle"></i> Auditoría de movimientos de efectivo.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/7567529/pexels-photo-7567529.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sistemas SAP">
+                </div>
+                <div class="card-body">
+                    <h3>Sistemas SAP</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Gestión en módulo <strong>FI-AP</strong>.</li>
+                        <li><i class="fas fa-check-circle"></i> Análisis de cuentas y compensaciones.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/4386341/pexels-photo-4386341.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Fe Pública">
+                </div>
+                <div class="card-body">
+                    <h3>Fe Pública</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <strong>Certificaciones de Ingresos</strong>.</li>
+                        <li><i class="fas fa-check-circle"></i> Balances Personales Visados.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Análisis en Excel">
+                </div>
+                <div class="card-body">
+                    <h3>Análisis en Excel</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Automatización de procesos contables.</li>
+                        <li><i class="fas fa-check-circle"></i> Reportes dinámicos de gestión.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </main>
 
     <section id="contacto">
-        <h2 class="section-title" style="color:white">Contacto <span>Exclusivo</span></h2>
+        <h2 class="section-title" style="color:white; margin-bottom: 40px;">Contacto <span>Exclusivo</span></h2>
         <div class="contact-card">
-            <div class="contact-item"><i class="fas fa-location-dot"></i><h4>Ubicación</h4><p>San Jacinto, Zona Norte</p></div>
-            <div class="contact-item"><i class="fas fa-envelope"></i><h4>Email</h4><p><a href="mailto:lcdo.jesusportillo@gmail.com">lcdo.jesusportillo@gmail.com</a></p></div>
-            <div class="contact-item"><i class="fas fa-phone"></i><h4>Teléfono</h4><p><a href="tel:+584126417722">+58 412-6417722</a></p></div>
+            <div class="contact-item">
+                <i class="fas fa-location-dot"></i>
+                <h4>Ubicación</h4>
+                <p>San Jacinto, Zona Norte<br>Maracaibo, Venezuela</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope-open-text"></i>
+                <h4>Email</h4>
+                <p><a href="mailto:lcdo.jesusportillo@gmail.com">lcdo.jesusportillo@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone-volume"></i>
+                <h4>Atención</h4>
+                <p><a href="tel:+584126417722">+58 412-6417722</a></p>
+            </div>
         </div>
     </section>
 
-    <a href="https://wa.me/584126417722" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/584126417722" class="wa-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-    <footer><p>&copy; 2026 Lcdo. Jesús Portillo - Maracaibo, Venezuela</p></footer>
+    <footer>
+        <p>&copy; 2026 Lcdo. Jesús Portillo - Consultor Contable | Maracaibo, Venezuela</p>
+    </footer>
 
 </body>
 </html>
